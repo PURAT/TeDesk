@@ -12,7 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/text_bottom"
         android:weightSum="2"
-        android:layout_margin="12dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:orientation="horizontal">
 
         <Button
@@ -20,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="6dp"
             android:layout_weight="1"
             android:background="@drawable/btn_sign_in"
             android:fontFamily="sans-serif-medium"
@@ -30,7 +32,7 @@
             android:id="@+id/button_sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="6dp"
             android:layout_marginRight="3dp"
             android:layout_weight="1"
             android:background="@drawable/btn_register"
@@ -63,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/suez_one"
         android:text="@string/text_bottom"
         android:textColor="@color/colorFewWhile"
