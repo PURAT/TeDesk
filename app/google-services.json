@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "330555023154",
+    "firebase_url": "https://questapp-4dcd0.firebaseio.com",
+    "project_id": "questapp-4dcd0",
+    "storage_bucket": "questapp-4dcd0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330555023154:android:dd44b7c12501e725ce012b",
+        "android_client_info": {
+          "package_name": "com.example.tedesk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330555023154-f4nipp5k2o8i0vv116fcjq3jmle3v3oi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tedesk",
+            "certificate_hash": "f20a5dc70594056f2eaaa3a09dde81480f1d3770"
+          }
+        },
+        {
+          "client_id": "330555023154-hm026hru8sb6vav7vseiik31jak6s5v4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzumIxZvzYWzE4phdlt5UvAdG7RZBiabY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330555023154-hm026hru8sb6vav7vseiik31jak6s5v4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

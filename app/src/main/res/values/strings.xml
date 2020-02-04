@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TeDesk</string>
+    <string name="app_name_after">Register</string>
+    <string name="text_bottom">Войдите в свою учётную запись</string>
+    <string name="btn_sign_in">Войти</string>
+    <string name="btn_sign_up">Зарегистрироваться</string>
+
+</resources>
