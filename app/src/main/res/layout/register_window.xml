@@ -26,7 +26,7 @@
 
             app:met_floatingLabel="highlight"
             app:met_singleLineEllipsis="true"
-            app:met_baseColor="#0056d3"
+            app:met_baseColor="@android:color/black"
             app:met_primaryColor="#982360"/>
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
 
             app:met_floatingLabel="highlight"
             app:met_singleLineEllipsis="true"
-            app:met_baseColor="#0056d3"
+            app:met_baseColor="@android:color/black"
             app:met_primaryColor="#982360"/>
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
@@ -56,7 +56,7 @@
 
             app:met_floatingLabel="highlight"
             app:met_singleLineEllipsis="true"
-            app:met_baseColor="#0056d3"
+            app:met_baseColor="@android:color/black"
             app:met_primaryColor="#982360"/>
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
@@ -71,7 +71,7 @@
 
             app:met_floatingLabel="highlight"
             app:met_singleLineEllipsis="true"
-            app:met_baseColor="#0056d3"
+            app:met_baseColor="@android:color/black"
             app:met_primaryColor="#982360"/>
 
 

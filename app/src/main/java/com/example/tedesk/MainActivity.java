@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private void showWindowRegister() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Зарегистроваться");
-        dialog.setMessage("Введите все данные для регитсрации");
+        dialog.setMessage("Введите все данные для регистрации");
 
         LayoutInflater flater = LayoutInflater.from(this);
         View register_window = flater.inflate(R.layout.register_window, null);
@@ -101,16 +101,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean checkFields(String emailText, String passwordText, String nameText, String surnameText) {
-        if (TextUtils.isEmpty(emailText)) {
-            Snackbar.make(root,"Введите почту", Snackbar.LENGTH_SHORT).show();
-            return false;
-        }
         if (TextUtils.isEmpty(nameText)) {
             Snackbar.make(root, "Введите имя", Snackbar.LENGTH_SHORT).show();
             return false;
         }
         if (TextUtils.isEmpty(surnameText)) {
             Snackbar.make(root, "Введите фамилию", Snackbar.LENGTH_SHORT).show();
+            return false;
+        }
+        if (TextUtils.isEmpty(emailText)) {
+            Snackbar.make(root,"Введите почту", Snackbar.LENGTH_SHORT).show();
             return false;
         }
         if (passwordText.length() < 6) {
