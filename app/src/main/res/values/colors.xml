@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#222020</color>
-    <color name="colorPrimaryDark">#009688</color>
+    <color name="colorPrimaryDark">#08B0C1</color>
     <color name="colorAccent">#64605F</color>
     <color name="colorFewWhile">#C4BDB4</color>
     <color name="ripple_effect1">#FAFA07</color>
@@ -11,5 +11,8 @@
     <color name="btn_sign_up_stroke">#CFB54B</color>
     <color name="btn_sign_in_stroke">#CC8F3D</color>
     <color name="material_text">#EAC913</color>
+
+    <color name="colorPrimaryToolbar">#FAD400</color>
+    <color name="mainBackgroundToolbar">#E2E2E2</color>
 
 </resources>
