@@ -16,36 +16,6 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/name_field"
-            android:hint="@string/name_field"
-            android:inputType="textEmailAddress"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="20sp"
-
-            app:met_floatingLabel="highlight"
-            app:met_singleLineEllipsis="true"
-            app:met_baseColor="@android:color/black"
-            app:met_primaryColor="@color/material_text"/>
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/surname_field"
-            android:hint="@string/surname_field"
-            android:inputType="textEmailAddress"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="20sp"
-
-            app:met_floatingLabel="highlight"
-            app:met_singleLineEllipsis="true"
-            app:met_baseColor="@android:color/black"
-            app:met_primaryColor="@color/material_text"/>
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/email_field"
             android:hint="@string/email_field"
             android:inputType="textEmailAddress"
@@ -58,6 +28,7 @@
             app:met_singleLineEllipsis="true"
             app:met_baseColor="@android:color/black"
             app:met_primaryColor="@color/material_text"/>
+
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
