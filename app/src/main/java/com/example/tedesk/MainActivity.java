@@ -1,9 +1,11 @@
 package com.example.tedesk;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.example.tedesk.model.User;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
@@ -47,12 +50,75 @@ public class MainActivity extends AppCompatActivity {
                 showWindowRegister();
             }
         });
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showWindowSignIn();
+            }
+        });
+
+    }
+
+    private void showWindowSignIn() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle("Вход");
+        dialog.setMessage("Введите данные для входа");
+
+        LayoutInflater flater = LayoutInflater.from(this);
+        View sign_in_window = flater.inflate(R.layout.sign_in_window, null);
+        dialog.setView(sign_in_window);
+
+        final MaterialEditText email = sign_in_window.findViewById(R.id.email_field);
+        final MaterialEditText password = sign_in_window.findViewById(R.id.password_field);
+
+        dialog.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.setPositiveButton("Войти", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                final String emailText = email.getText().toString();
+                final String passwordText = password.getText().toString();
+
+                if (TextUtils.isEmpty(emailText)) {
+                    Snackbar.make(root, "Введите email", Snackbar.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(passwordText)) {
+                    Snackbar.make(root, "Введите пароль", Snackbar.LENGTH_SHORT).show();
+                    return;
+                }
+
+                auth.signInWithEmailAndPassword(emailText, passwordText)
+                        .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                            @Override
+                            public void onSuccess(AuthResult authResult) {
+                                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Snackbar.make(root, "Неправильный пароль или email", Snackbar.LENGTH_SHORT).show();
+                    }
+                });
+
+            }
+        });
+
+        dialog.show();
+
     }
 
     private void showWindowRegister() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Зарегистроваться");
-        dialog.setMessage("Введите все данные для регистрации");
+        dialog.setMessage("Введите данные для регистрации");
 
         LayoutInflater flater = LayoutInflater.from(this);
         View register_window = flater.inflate(R.layout.register_window, null);
@@ -78,22 +144,32 @@ public class MainActivity extends AppCompatActivity {
                 final String nameText = name.getText().toString();
                 final String surNameText = surname.getText().toString();
 
-                   if (checkFields(emailText, passwordText, nameText, surNameText)) {
-                       //Регистрация пользователя
-                       auth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
-                               .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                                   @Override
-                                   public void onSuccess(AuthResult authResult) {
-                                       User user = new User();
-                                       user.setEmail(emailText);
-                                       user.setPassword(passwordText);
-                                       user.setName(nameText);
-                                       user.setSurname(surNameText);
+                if (checkFields(emailText, passwordText, nameText, surNameText)) {
+                    //Регистрация пользователя
+                    auth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                            .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                @Override
+                                public void onSuccess(AuthResult authResult) {
+                                    User user = new User();
+                                    user.setEmail(emailText);
+                                    user.setPassword(passwordText);
+                                    user.setName(nameText);
+                                    user.setSurname(surNameText);
 
-                                       users.child(user.getEmail()).setValue(user);
-                                   }
-                               });
-                   }
+                                    users.child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).setValue(user);
+                                }
+                            }).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                        @Override
+                        public void onSuccess(AuthResult authResult) {
+                            Snackbar.make(root, "Вы были зарегистрированы ", Snackbar.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Snackbar.make(root, "Ошибка регистрации " + e.getMessage(), Snackbar.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
 
@@ -110,13 +186,13 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
         if (TextUtils.isEmpty(emailText)) {
-            Snackbar.make(root,"Введите почту", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(root, "Введите email", Snackbar.LENGTH_SHORT).show();
             return false;
         }
         if (passwordText.length() < 6) {
             Snackbar.make(root, "Введите пароль (больше 5 символов)", Snackbar.LENGTH_SHORT).show();
             return false;
         }
-        return  true;
+        return true;
     }
 }
