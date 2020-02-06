@@ -1,11 +1,14 @@
+
 package com.example.tedesk;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.TargetApi;
+
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toolbar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -19,9 +22,8 @@ public class MenuActivity extends AppCompatActivity {
         initToolbar();
     }
 
-    @TargetApi(21)
     private void initToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
 
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
@@ -30,7 +32,6 @@ public class MenuActivity extends AppCompatActivity {
                 return false;
             }
         });
-
 
     }
 }
