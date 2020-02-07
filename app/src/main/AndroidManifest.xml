@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/image"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MenuActivity">
+
+        <activity android:name=".MenuActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait">

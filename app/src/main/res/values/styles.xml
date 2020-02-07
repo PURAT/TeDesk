@@ -9,4 +9,20 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <!-- <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item> -->
+        <item name="android:background">@color/colorPrimaryToolbar</item>
+    </style>
+
+<!--    <style name="AppTheme" parent="AppTheme.Base"/>-->
+<!--    <style name="AppTheme.Base" parent="Theme.AppCompat">-->
+<!--        <item name="colorPrimary">@color/colorPrimaryToolbar</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDarkToolbar</item>-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--    </style>-->
+
+
+
 </resources>

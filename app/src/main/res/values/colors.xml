@@ -12,4 +12,8 @@
     <color name="btn_sign_in_stroke">#CC8F3D</color>
     <color name="material_text">#EAC913</color>
 
+    <color name="colorPrimaryToolbar">#FAD400</color>
+    <color name="colorPrimaryDarkToolbar">#222222</color>
+    <color name="mainBackgroundToolbar">#E2E2E2</color>
+
 </resources>
