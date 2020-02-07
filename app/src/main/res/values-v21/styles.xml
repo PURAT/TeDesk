@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme2" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryToolbar</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkToolbar</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>
