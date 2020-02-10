@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Auth-->
     <color name="colorPrimary">#222020</color>
     <color name="colorPrimaryDark">#08B0C1</color>
     <color name="colorAccent">#64605F</color>
@@ -12,9 +13,16 @@
     <color name="btn_sign_in_stroke">#CC8F3D</color>
     <color name="material_text">#EAC913</color>
 
+    <!--Menu-->
     <color name="colorPrimaryToolbar">#FAD400</color>
     <color name="colorPrimaryDarkToolbar">#222222</color>
     <color name="mainBackgroundToolbar">#E2E2E2</color>
     <color name="colorNavigationView">#4D4D4D</color>
+
+    <!--For test's buttons-->
+    <color name="ripple_effect3">#E0DBDB</color>
+    <color name="btn_tests">#D1CBCB</color>
+    <color name="btn_tests_stroke">#A8A7A7</color>
+
 
 </resources>
