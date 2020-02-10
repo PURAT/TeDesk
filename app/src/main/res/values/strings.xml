@@ -13,4 +13,6 @@
     <string name="test3">Охрана труда</string>
     <string name="text_tests">Выберите тест:</string>
 
+    <string name="menu_item_notification">Информация</string>
+
 </resources>
