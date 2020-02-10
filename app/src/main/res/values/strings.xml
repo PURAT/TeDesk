@@ -8,6 +8,10 @@
     <string name="email_field">Email</string>
     <string name="name_field">Имя</string>
     <string name="surname_field">Фамилия</string>
+    <string name="test1">"Электробезопасность</string>
+    <string name="test2">Медицина</string>
+    <string name="test3">Охрана труда</string>
+    <string name="text_tests">Выберите тест:</string>
 
     <string name="menu_item_notification">Информация</string>
 
