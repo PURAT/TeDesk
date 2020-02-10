@@ -2,7 +2,7 @@
 <resources>
     <!--Auth-->
     <color name="colorPrimary">#222020</color>
-    <color name="colorPrimaryDark">#08B0C1</color>
+    <color name="colorPrimaryDark">#009688</color>
     <color name="colorAccent">#64605F</color>
     <color name="colorFewWhile">#C4BDB4</color>
     <color name="ripple_effect1">#FAFA07</color>
