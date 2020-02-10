@@ -9,4 +9,6 @@
     <string name="name_field">Имя</string>
     <string name="surname_field">Фамилия</string>
 
+    <string name="menu_item_notification">Информация</string>
+
 </resources>
