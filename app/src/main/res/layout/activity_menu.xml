@@ -10,6 +10,73 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:padding="10dp"
+                android:text="@string/text_tests"
+                android:textColor="@android:color/black"
+                android:textSize="35sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="140dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/btn_tests"
+                    android:fontFamily="serif"
+                    android:text="@string/test1"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/btn_tests"
+                    android:fontFamily="serif"
+                    android:text="@string/test2"
+                    android:textAllCaps="false"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/btn_tests"
+                    android:fontFamily="serif"
+                    android:text="@string/test3"
+                    android:textAllCaps="false"
+                    android:textSize="25sp" />
+            </LinearLayout>
+        </ScrollView>
+
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
@@ -17,7 +84,25 @@
             <include
                 android:id="@+id/toolbar"
                 layout="@layout/toolbar" />
+
+           <!-- <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@android:color/white"
+                app:tabIndicatorHeight="6dp"
+                app:tabSelectedTextColor="@android:color/white"
+                app:tabTextColor="@android:color/white" /> -->
+
+
         </com.google.android.material.appbar.AppBarLayout>
+
+
+        <!--<androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/> -->
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -25,9 +110,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/menu_navigation"
-        app:headerLayout="@layout/navigation_header"/>
-
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/menu_navigation" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
 
