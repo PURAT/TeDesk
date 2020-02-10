@@ -5,10 +5,15 @@ package com.example.tedesk;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.navigation.NavigationView;
 
 
 public class MenuActivity extends AppCompatActivity {
@@ -17,6 +22,7 @@ public class MenuActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,5 +50,30 @@ public class MenuActivity extends AppCompatActivity {
 
     private void initNavigationView() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout,toolbar,R.string.view_navigation_open,R.string.view_navigation_close);
+        drawerLayout.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem){
+                drawerLayout.closeDrawers();
+                switch (menuItem.getItemId()){
+                    case R.id.actionHomeItem:
+                        Toast.makeText(getApplicationContext(),"Home is selected",Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.actionInformationItem:
+                        Toast.makeText(getApplicationContext(),"Information is selected",Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.actionSettingsItem:
+                        Toast.makeText(getApplicationContext(),"Settings is selected",Toast.LENGTH_LONG).show();
+                        break;
+                }
+                return false;
+            }
+        });
     }
+
 }
