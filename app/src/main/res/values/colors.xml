@@ -15,5 +15,6 @@
     <color name="colorPrimaryToolbar">#FAD400</color>
     <color name="colorPrimaryDarkToolbar">#222222</color>
     <color name="mainBackgroundToolbar">#E2E2E2</color>
+    <color name="colorNavigationView">#4D4D4D</color>
 
 </resources>
