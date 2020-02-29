@@ -1,4 +1,4 @@
-package com.example.tedesk.model;
+package com.example.tedesk.models;
 
 public class User {
     private String email, password, name, surname;

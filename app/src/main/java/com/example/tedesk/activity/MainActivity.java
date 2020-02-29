@@ -1,4 +1,4 @@
-package com.example.tedesk;
+package com.example.tedesk.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -6,15 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
-import com.example.tedesk.model.User;
+import com.example.tedesk.R;
+import com.example.tedesk.models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
@@ -25,6 +26,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Toast backToast;
+    private long backPressedMillis;
+
     Button register, signIn;
     FirebaseAuth auth;
     FirebaseDatabase db;
@@ -85,11 +90,11 @@ public class MainActivity extends AppCompatActivity {
                 final String passwordText = password.getText().toString();
 
                 if (TextUtils.isEmpty(emailText)) {
-                    Snackbar.make(root, "Введите email", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(root, "Введите email", Snackbar.LENGTH_LONG).show();
                     return;
                 }
                 if (TextUtils.isEmpty(passwordText)) {
-                    Snackbar.make(root, "Введите пароль", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(root, "Введите пароль", Snackbar.LENGTH_LONG).show();
                     return;
                 }
 
@@ -104,7 +109,10 @@ public class MainActivity extends AppCompatActivity {
                         }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Snackbar.make(root, "Неправильный пароль или email", Snackbar.LENGTH_SHORT).show();
+                        if (e.getMessage().contains("network"))
+                            Snackbar.make(root, "Проверьте подключение к интернету", Snackbar.LENGTH_LONG).show();
+                        else
+                            Snackbar.make(root, "Неправильный пароль или email", Snackbar.LENGTH_LONG).show();
                     }
                 });
 
@@ -161,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                             }).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
                         public void onSuccess(AuthResult authResult) {
-                            Snackbar.make(root, "Вы были зарегистрированы ", Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(root, "Вы были зарегистрированы ", Snackbar.LENGTH_LONG).show();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -178,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean checkFields(String emailText, String passwordText, String nameText, String surnameText) {
         if (TextUtils.isEmpty(nameText)) {
-            Snackbar.make(root, "Введите имя", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(root, "Введите имя", Snackbar.LENGTH_LONG).show();
             return false;
         }
         if (TextUtils.isEmpty(surnameText)) {
@@ -186,13 +194,27 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
         if (TextUtils.isEmpty(emailText)) {
-            Snackbar.make(root, "Введите email", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(root, "Введите email", Snackbar.LENGTH_LONG).show();
             return false;
         }
         if (passwordText.length() < 6) {
-            Snackbar.make(root, "Введите пароль (больше 5 символов)", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(root, "Введите пароль (больше 5 символов)", Snackbar.LENGTH_LONG).show();
             return false;
         }
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (backPressedMillis + 2000 > System.currentTimeMillis()) {
+            backToast.cancel();
+            super.onBackPressed();
+            return;
+        } else {
+            backToast = Toast.makeText(this, "Нажмите ещё раз, чтобы выйти", Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+
+        backPressedMillis = System.currentTimeMillis();
     }
 }

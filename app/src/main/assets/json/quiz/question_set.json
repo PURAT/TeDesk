@@ -1,0 +1,101 @@
+{
+  "questionnaires": [
+    {
+      "question": "Когда был основан СПбГУ?",
+      "answers": [
+        "1724",
+        "1826",
+        "1754",
+        "1752"
+      ],
+      "correct_answer": 0,
+      "question_category": "1"
+    },
+    {
+      "question": "Что такое виджеты приложений? ",
+      "answers": [
+        "Приложения, которые работают в фоновом режиме ",
+        "Небольшие представления приложений, которые можно поместить в другие приложения",
+        "Небольшие приложения, которые запускаются, когда включается мобильное устройство ",
+        "Ничего из перечисленного "
+      ],
+      "correct_answer": 1,
+      "question_category": "1"
+    },
+    {
+      "question": "Что из следующего не является Android компонентом?",
+      "answers": [
+        "Service",
+        "Activity",
+        "Layout",
+        "Content Provider"
+      ],
+      "correct_answer": 2,
+      "question_category": "1"
+    },
+    {
+      "question": "Когда был основан МГУ?",
+      "answers": [
+        "1752",
+        "1802",
+        "1756",
+        "1755"
+      ],
+      "correct_answer": 3,
+      "question_category": "2"
+    },
+    {
+      "question": "Библиотеки DalvikVM core являются составной частью:",
+      "answers": [
+        "Java ME",
+        "Java SE",
+        "Java EE",
+        "JAX-WS"
+      ],
+      "correct_answer": 1,
+      "question_category": "2"
+    },
+    {
+      "question": "Устройство с установленной операционной системой Android необходимо для разработки приложений для Android.",
+      "answers": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "question_category": "2"
+    },
+    {
+      "question": "Когда был основан БГУ?",
+      "answers": [
+        "1955",
+        "1921",
+        "1899",
+        "1925"
+      ],
+      "correct_answer": 1,
+      "question_category": "3"
+    },
+    {
+      "question": "Кто владеет платформой Android?",
+      "answers": [
+        "Oracle Technology",
+        "Dalvik",
+        "Open Handset Alliance",
+        "Google"
+      ],
+      "correct_answer": 2,
+      "question_category": "3"
+    },
+    {
+      "question": "Какой была основная бизнес мотивация Google для поддержки Android?",
+      "answers": [
+        "Чтобы выровнять игровое поле для мобильных устройств.",
+        "Чтобы конкурировать с iPhone.",
+        "Монополизировать рынок мобильных приложений для целей лицензирования.",
+        "Чтобы позволить Google больше рекламировать."
+      ],
+      "correct_answer": 3,
+      "question_category": "3"
+    }
+  ]
+}

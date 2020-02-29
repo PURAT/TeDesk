@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "question_category": "1",
+      "category_name": "Электробезопастность"
+    },
+    {
+      "question_category": "2",
+      "category_name": "Медицина"
+    },
+    {
+      "question_category": "3",
+      "category_name": "Охрана труда"
+    }
+  ]
+}
