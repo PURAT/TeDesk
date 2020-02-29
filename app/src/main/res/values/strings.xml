@@ -46,6 +46,9 @@
     <string name="reward_dialog_message">Получить дополнительную попытку после просмотра видео?</string>
     <string name="skip_text">Пропустить?</string>
     <string name="skip_prompt">Пропустить этот вопрос?</string>
+    <string name="finish_test_title">Завершение</string>
+    <string name="congratulation_message">Поздравляем! Тест завершён.</string>
+    <string name="ok">Ok</string>
 
 
 
