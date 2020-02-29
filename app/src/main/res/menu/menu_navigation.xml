@@ -2,20 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/actionHomeItem"
-        android:title="@string/menu_item_home"
+        android:id="@+id/actionRemindingItem"
+        android:title="@string/menu_item_notification"
         android:orderInCategory="1"
         android:icon="@mipmap/ic_message_text_outline"/>
     <item
-        android:id="@+id/actionInformationItem"
-        android:title="@string/menu_item_information"
+        android:id="@+id/actionFavouritesItem"
+        android:title="@string/menu_item_favourites"
         android:orderInCategory="1"
-        android:icon="@mipmap/ic_message_text_outline"/>
+        android:icon="@mipmap/ic_star"/>
     <item
         android:id="@+id/actionSettingsItem"
         android:title="@string/menu_item_settings"
         android:orderInCategory="1"
-        android:icon="@mipmap/ic_message_text_outline"/>
+        android:icon="@mipmap/ic_cog_outline"/>
+    <item
+        android:id="@+id/actionReferenceItem"
+        android:title="@string/menu_item_reference"
+        android:orderInCategory="1"
+        android:icon="@mipmap/ic_information_outline"/>
 
 
 </menu>

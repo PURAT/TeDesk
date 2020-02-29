@@ -56,7 +56,7 @@
             android:layout_below="@id/third_text"
             android:layout_marginTop="20dp"
             android:background="@drawable/btn_tests"
-            android:text="yes" />
+            android:text="@string/yes" />
 
         <Button
             android:id="@+id/btn_no"
@@ -65,7 +65,7 @@
             android:layout_below="@id/btn_yes"
             android:layout_marginTop="20dp"
             android:background="@drawable/btn_tests"
-            android:text="no" />
+            android:text="@string/no" />
 
     </RelativeLayout>
 

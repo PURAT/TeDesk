@@ -297,6 +297,10 @@ public class QuizActivity extends BaseActivity implements  DialogUtilities.OnCom
             dialog.show(manager, AppConstants.BUNDLE_KEY_DIALOG_FRAGMENT);
         } else {
             //TODO: invoke ScoreCardActivity
+
+            FragmentManager manager = getSupportFragmentManager();
+            DialogUtilities dialog = DialogUtilities.newInstance(getString(R.string.finish_test_title), getString(R.string.congratulation_message), getString(R.string.ok),"", AppConstants.BUNDLE_KEY_CLOSE_OPTION);
+            dialog.show(manager, AppConstants.BUNDLE_KEY_DIALOG_FRAGMENT);
         }
     }
 
