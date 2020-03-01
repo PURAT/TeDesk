@@ -13,11 +13,10 @@
     <string name="test3">Охрана труда</string>
     <string name="text_tests">Выберите тест:</string>
 
-    <string name="menu_item_notification">Информация</string>
-
-    <string name="menu_item_home">Home</string>
-    <string name="menu_item_information">Информация</string>
+    <string name="menu_item_notification">Напоминания</string>
+    <string name="menu_item_favourites">Избранное</string>
     <string name="menu_item_settings">Настройки</string>
+    <string name="menu_item_reference">Справка</string>
 
 
     <string name="view_navigation_open">Open</string>

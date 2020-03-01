@@ -87,14 +87,17 @@ public class MenuActivity extends BaseActivity {
             public boolean onNavigationItemSelected(MenuItem menuItem){
                 drawerLayout.closeDrawers();
                 switch (menuItem.getItemId()){
-                    case R.id.actionHomeItem:
-                        Toast.makeText(getApplicationContext(),"Home is selected",Toast.LENGTH_LONG).show();
+                    case R.id.actionRemindingItem:
+                        Toast.makeText(getApplicationContext(),"Reminding is selected",Toast.LENGTH_LONG).show();
                         break;
-                    case R.id.actionInformationItem:
-                        Toast.makeText(getApplicationContext(),"Information is selected",Toast.LENGTH_LONG).show();
+                    case R.id.actionFavouritesItem:
+                        Toast.makeText(getApplicationContext(),"Favourites is selected",Toast.LENGTH_LONG).show();
                         break;
                     case R.id.actionSettingsItem:
                         Toast.makeText(getApplicationContext(),"Settings is selected",Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.actionReferenceItem:
+                        Toast.makeText(getApplicationContext(),"Reference is selected",Toast.LENGTH_LONG).show();
                         break;
                 }
                 return false;
