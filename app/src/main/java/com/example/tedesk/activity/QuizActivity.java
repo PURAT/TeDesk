@@ -298,8 +298,9 @@ public class QuizActivity extends BaseActivity implements  DialogUtilities.OnCom
         } else {
             //TODO: invoke ScoreCardActivity
 
+
             FragmentManager manager = getSupportFragmentManager();
-            DialogUtilities dialog = DialogUtilities.newInstance(getString(R.string.finish_test_title), getString(R.string.congratulation_message), getString(R.string.ok),"", AppConstants.BUNDLE_KEY_CLOSE_OPTION);
+            DialogUtilities dialog = DialogUtilities.newInstance(getString(R.string.finish_test_title), getString(R.string.congratulation_message) + " " + mScore, getString(R.string.ok),"", AppConstants.BUNDLE_KEY_CLOSE_OPTION);
             dialog.show(manager, AppConstants.BUNDLE_KEY_DIALOG_FRAGMENT);
         }
     }
@@ -404,6 +405,8 @@ public class QuizActivity extends BaseActivity implements  DialogUtilities.OnCom
         if (isOkPressed) {
             if (viewIdText.equals(AppConstants.BUNDLE_KEY_CLOSE_OPTION)) {
                 ActivityUtilities.getInstance().invokeNewActivity(mActivity, MenuActivity.class, true);
+                AppPreference.getInstance(mContext).setQuizResult(mCategoryId, mScore);
+                AppPreference.getInstance(mContext).setQuizQuestionsCount(mCategoryId, mQuestionsCount);
             } else if (viewIdText.equals(AppConstants.BUNDLE_KEY_SKIP_OPTION)) {
                 mSkip++;
                 //TODO: mIsSkipped = true;
