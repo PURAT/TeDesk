@@ -23,6 +23,8 @@
         </activity>
         <activity android:name=".activity.BaseActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SelectionActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.QuizPromptActivity"
             android:screenOrientation="portrait"/>
