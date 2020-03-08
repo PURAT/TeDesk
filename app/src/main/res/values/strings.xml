@@ -35,6 +35,7 @@
     <string name="exit">Выход</string>
 
     <string name="quiz">Тестирование</string>
+    <string name="choice">Режим</string>
     <string name="skipped_text">Вы пропустили этот вопрос</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
@@ -48,6 +49,10 @@
     <string name="finish_test_title">Завершение</string>
     <string name="congratulation_message">Поздравляем! Тест завершён.\nПравильно: </string>
     <string name="ok">Ok</string>
+
+    <string name="tv_selection">Выберите режим:</string>
+    <string name="training">Обучение</string>
+    <string name="testing">Тестирование</string>
 
 
 
