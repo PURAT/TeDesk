@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 import com.example.tedesk.R;
 import com.example.tedesk.utilities.ActivityUtilities;
@@ -26,6 +27,11 @@ public class ActivityItem4 extends BaseActivity {
 
         initToolbar(getString(R.string.item_4));
         enableUpButton();
+        onBackPressed();
+
+
+        WebView myWebView = (WebView) findViewById(R.id.webview);
+        myWebView.loadUrl("https://vk.com/doc174915045_540985154?hash=26d5e491d41853d227&dl=1e2294160fa94f7e21");
     }
 
     @Override

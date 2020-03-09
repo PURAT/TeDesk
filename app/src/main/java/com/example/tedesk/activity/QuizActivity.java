@@ -404,7 +404,7 @@ public class QuizActivity extends BaseActivity implements  DialogUtilities.OnCom
     public void onComplete(Boolean isOkPressed, String viewIdText) {
         if (isOkPressed) {
             if (viewIdText.equals(AppConstants.BUNDLE_KEY_CLOSE_OPTION)) {
-                ActivityUtilities.getInstance().invokeNewActivity(mActivity, MenuActivity.class, true);
+                ActivityUtilities.getInstance().invokeCommonQuizActivity(mActivity, SelectionActivity.class, mCategoryId, true);
                 AppPreference.getInstance(mContext).setQuizResult(mCategoryId, mScore);
                 AppPreference.getInstance(mContext).setQuizQuestionsCount(mCategoryId, mQuestionsCount);
             } else if (viewIdText.equals(AppConstants.BUNDLE_KEY_SKIP_OPTION)) {

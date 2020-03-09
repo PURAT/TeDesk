@@ -74,7 +74,7 @@ public class QuizPromptActivity extends BaseActivity {
         mBtnNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ActivityUtilities.getInstance().invokeNewActivity(mActivity, MenuActivity.class, true);
+                ActivityUtilities.getInstance().invokeCommonQuizActivity(mActivity, SelectionActivity.class, categoryId, true);
             }
         });
     }
@@ -83,7 +83,7 @@ public class QuizPromptActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                ActivityUtilities.getInstance().invokeNewActivity(mActivity, MenuActivity.class, true);
+                ActivityUtilities.getInstance().invokeCommonQuizActivity(mActivity, SelectionActivity.class, categoryId,true);
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -91,6 +91,6 @@ public class QuizPromptActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        ActivityUtilities.getInstance().invokeNewActivity(mActivity, MenuActivity.class, true);
+        ActivityUtilities.getInstance().invokeCommonQuizActivity(mActivity, SelectionActivity.class, categoryId, true);
     }
 }

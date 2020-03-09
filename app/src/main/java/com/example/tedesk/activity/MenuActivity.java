@@ -161,7 +161,7 @@ public class MenuActivity extends BaseActivity {
             public void onItemClick(int position, View view) {
 
                 CategoryModel model = categoryList.get(position);
-                ActivityUtilities.getInstance().invokeCommonQuizActivity(activity, QuizPromptActivity.class, model.getCategoryId(), true);
+                ActivityUtilities.getInstance().invokeCommonQuizActivity(activity, SelectionActivity.class, model.getCategoryId(), true);
             }
         });
     }

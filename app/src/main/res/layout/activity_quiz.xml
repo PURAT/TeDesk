@@ -116,6 +116,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             android:text="@string/next_question"
+            android:fontFamily="serif"
             android:background="@drawable/btn_tests"/>
 
     </RelativeLayout>

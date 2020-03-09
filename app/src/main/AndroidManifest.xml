@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/image"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ActivityItem4"></activity>
+
+        <activity android:name=".activity.ActivityItem4" />
         <activity android:name=".activity.ActivityItem3" />
         <activity android:name=".activity.ActivityItem2" />
         <activity
@@ -26,6 +27,9 @@
         </activity>
         <activity
             android:name=".activity.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelectionActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.QuizPromptActivity"

@@ -35,6 +35,7 @@
     <string name="exit">Выход</string>
 
     <string name="quiz">Тестирование</string>
+    <string name="choice">Режим</string>
     <string name="skipped_text">Вы пропустили этот вопрос</string>
     <string name="yes">Да</string>
     <string name="no">Нет</string>
@@ -52,6 +53,11 @@
     <string name="item_2">Молнии</string>
     <string name="item_3">Золотые правила</string>
     <string name="item_4">Политика</string>
+
+    <string name="tv_selection">Выберите режим:</string>
+    <string name="training">Обучение</string>
+    <string name="testing">Тестирование</string>
+
 
 
 </resources>

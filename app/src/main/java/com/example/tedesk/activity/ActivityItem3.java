@@ -28,19 +28,19 @@ public class ActivityItem3 extends BaseActivity {
         initView();
     }
 
-    private class MyWebViewClient extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            if ("https://vk.com/andrey.shtunder".equals(Uri.parse(url).getHost())) {
-                // This is my website, so do not override; let my WebView load the page
-                return false;
-            }
-            // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-            startActivity(intent);
-            return true;
-        }
-    }
+//    private class MyWebViewClient extends WebViewClient {
+//        @Override
+//        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//            if ("http://tzk.ru/ftpgetfile.php?id=3084".equals(Uri.parse(url).getHost())) {
+//                // This is my website, so do not override; let my WebView load the page
+//                return false;
+//            }
+//            // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
+//            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+//            startActivity(intent);
+//            return true;
+//        }
+//    }
 
     private void initView() {
         mActivity = ActivityItem3.this;
@@ -48,19 +48,21 @@ public class ActivityItem3 extends BaseActivity {
 
         initToolbar(getString(R.string.item_3));
         enableUpButton();
+        onBackPressed();
 
 
         WebView myWebView = (WebView) findViewById(R.id.webview);
-//      myWebView.loadUrl("https://vk.com/andrey.shtunder");
-//      myWebView.setWebViewClient(new MyWebViewClient());
-        invokeNativeApp("https://vk.com/andrey.shtunder");
+        myWebView.loadUrl("https://vk.com/doc174915045_540985036?hash=6a41882526336ff283&dl=1095aa409e4c4c417d");
+
+//        myWebView.setWebViewClient(new MyWebViewClient());
+//        invokeNativeApp("https://vk.com/doc174915045_540984857?hash=dc8161e6df4c7f55e8&dl=651e8d4eb8362c449a");
 
 }
 
-    private void invokeNativeApp(String url) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        mActivity.startActivity(intent);
-    }
+//    private void invokeNativeApp(String url) {
+//        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+//        mActivity.startActivity(intent);
+//    }
 
 
 
