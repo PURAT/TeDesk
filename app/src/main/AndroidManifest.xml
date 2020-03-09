@@ -10,9 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".activity.ActivityItem4" />
-        <activity android:name=".activity.ActivityItem3" />
-        <activity android:name=".activity.ActivityItem2" />
+        <activity
+            android:name=".activity.ActivityItem4"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ActivityItem3"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ActivityItem2"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.MenuActivity"
             android:screenOrientation="portrait" />
