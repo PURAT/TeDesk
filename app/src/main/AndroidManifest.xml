@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/image"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".activity.MenuActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".activity.MainActivity"
+        <activity android:name=".activity.ActivityItem4"></activity>
+        <activity android:name=".activity.ActivityItem3" />
+        <activity android:name=".activity.ActivityItem2" />
+        <activity
+            android:name=".activity.MenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,14 +24,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.BaseActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.BaseActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.QuizPromptActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.QuizActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"

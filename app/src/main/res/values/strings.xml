@@ -13,10 +13,10 @@
     <string name="test3">Охрана труда</string>
     <string name="text_tests">Выберите тест:</string>
 
-    <string name="menu_item_notification">Напоминания</string>
-    <string name="menu_item_favourites">Избранное</string>
-    <string name="menu_item_settings">Настройки</string>
-    <string name="menu_item_reference">Справка</string>
+    <string name="menu_item_1">Подготовка к аттестации</string>
+    <string name="menu_item_2">Молнии</string>
+    <string name="menu_item_3">Золотые правила</string>
+    <string name="menu_item_4">Политика</string>
 
 
     <string name="view_navigation_open">Open</string>
@@ -46,9 +46,12 @@
     <string name="skip_text">Пропустить?</string>
     <string name="skip_prompt">Пропустить этот вопрос?</string>
     <string name="finish_test_title">Завершение</string>
-    <string name="congratulation_message">Поздравляем! Тест завершён.</string>
+    <string name="congratulation_message">Поздравляем! Тест завершён.\nПравильно: </string>
     <string name="ok">Ok</string>
 
+    <string name="item_2">Молнии</string>
+    <string name="item_3">Золотые правила</string>
+    <string name="item_4">Политика</string>
 
 
 </resources>

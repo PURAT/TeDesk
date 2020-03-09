@@ -5,6 +5,7 @@ package com.example.tedesk.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -87,17 +88,20 @@ public class MenuActivity extends BaseActivity {
             public boolean onNavigationItemSelected(MenuItem menuItem){
                 drawerLayout.closeDrawers();
                 switch (menuItem.getItemId()){
-                    case R.id.actionRemindingItem:
-                        Toast.makeText(getApplicationContext(),"Reminding is selected",Toast.LENGTH_LONG).show();
+                    case R.id.actionItem1:
                         break;
-                    case R.id.actionFavouritesItem:
-                        Toast.makeText(getApplicationContext(),"Favourites is selected",Toast.LENGTH_LONG).show();
+                    case R.id.actionItem2:
+                        Intent intent = new Intent(MenuActivity.this, ActivityItem2.class);
+                        startActivity(intent);
                         break;
-                    case R.id.actionSettingsItem:
-                        Toast.makeText(getApplicationContext(),"Settings is selected",Toast.LENGTH_LONG).show();
+                    case R.id.actionItem3:
+                        intent = new Intent(MenuActivity.this, ActivityItem3.class);
+                        startActivity(intent);
                         break;
-                    case R.id.actionReferenceItem:
-                        Toast.makeText(getApplicationContext(),"Reference is selected",Toast.LENGTH_LONG).show();
+                    case R.id.actionItem4:
+                        intent = new Intent(MenuActivity.this, ActivityItem4.class);
+                        startActivity(intent);
+                        //Toast.makeText(getApplicationContext(),"Reference is selected",Toast.LENGTH_LONG).show();
                         break;
                 }
                 return false;
