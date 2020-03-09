@@ -4,9 +4,60 @@
     <string name="text_bottom">Войдите в свою учётную запись</string>
     <string name="btn_sign_in">Войти</string>
     <string name="btn_sign_up">Зарегистрироваться</string>
-    <string name="password_field">Пароль</string>
+    <string name="password_field">Пароль ( > 5 символов )</string>
     <string name="email_field">Email</string>
     <string name="name_field">Имя</string>
     <string name="surname_field">Фамилия</string>
+    <string name="test1">"Электробезопасность</string>
+    <string name="test2">Медицина</string>
+    <string name="test3">Охрана труда</string>
+    <string name="text_tests">Выберите тест:</string>
+
+    <string name="menu_item_1">Подготовка к аттестации</string>
+    <string name="menu_item_2">Молнии</string>
+    <string name="menu_item_3">Золотые правила</string>
+    <string name="menu_item_4">Политика</string>
+
+
+    <string name="view_navigation_open">Open</string>
+    <string name="view_navigation_close">Close</string>
+
+
+    <string name="tv_description">Проверить свои знания?</string>
+    <string name="quiz_promt_first_text">Предыдущий результат: %s из %s</string>
+    <string name="quiz_promt_third_text">Пройти тест снова?</string>
+
+    <string name="quiz_prompt">Тестирование</string>
+    <string name="quiz_question_title">Вопрос %d из %d</string>
+    <string name="next_question">Следующий вопрос</string>
+
+
+    <string name="exit">Выход</string>
+
+    <string name="quiz">Тестирование</string>
+    <string name="choice">Режим</string>
+    <string name="skipped_text">Вы пропустили этот вопрос</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="default_text">Средний</string>
+    <string name="close_prompt">Закрыть приложение?</string>
+    <string name="cancel_prompt">Прекратить тестирование?</string>
+    <string name="reward_dialog_title">Еще один шанс?</string>
+    <string name="reward_dialog_message">Получить дополнительную попытку после просмотра видео?</string>
+    <string name="skip_text">Пропустить?</string>
+    <string name="skip_prompt">Пропустить этот вопрос?</string>
+    <string name="finish_test_title">Завершение</string>
+    <string name="congratulation_message">Поздравляем! Тест завершён.\nПравильно: </string>
+    <string name="ok">Ok</string>
+
+    <string name="item_2">Молнии</string>
+    <string name="item_3">Золотые правила</string>
+    <string name="item_4">Политика</string>
+
+    <string name="tv_selection">Выберите режим:</string>
+    <string name="training">Обучение</string>
+    <string name="testing">Тестирование</string>
+
+
 
 </resources>

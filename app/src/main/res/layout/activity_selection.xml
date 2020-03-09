@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:layout_below="@id/toolbar">
+
+        <ImageView
+            android:id="@+id/choice"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/choice" />
+
+
+        <TextView
+            android:id="@+id/selection_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choice"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="@string/tv_selection"
+            android:fontFamily="serif"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn_training"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/selection_text"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_tests"
+            android:text="@string/training"
+            android:fontFamily="serif"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_testing"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="serif"
+            android:layout_below="@id/btn_training"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_tests"
+            android:text="@string/testing"
+            android:textSize="18sp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/actionItem1"
+        android:title="@string/menu_item_1"
+        android:orderInCategory="1"
+        android:icon="@mipmap/ic_message_text_outline"/>
+    <item
+        android:id="@+id/actionItem2"
+        android:title="@string/menu_item_2"
+        android:orderInCategory="1"
+        android:icon="@mipmap/ic_star"/>
+    <item
+        android:id="@+id/actionItem3"
+        android:title="@string/menu_item_3"
+        android:orderInCategory="1"
+        android:icon="@mipmap/ic_cog_outline"/>
+    <item
+        android:id="@+id/actionItem4"
+        android:title="@string/menu_item_4"
+        android:orderInCategory="1"
+        android:icon="@mipmap/ic_information_outline"/>
+
+
+</menu>
